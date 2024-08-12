@@ -1,0 +1,40 @@
+.oo-ui-menuLayout-expanded, .oo-ui-menuLayout-expanded > .oo-ui-menuLayout-menu, .oo-ui-menuLayout-expanded > .oo-ui-menuLayout-content {
+    position: inherit;
+}
+
+.oo-ui-panelLayout-expanded {
+    position: inherit;
+}
+
+.ext-review-ui-inspectRevisionDialog-progress {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 16px 1fr;
+    grid-template-areas:
+        ". . ."
+        ". progress ."
+        ". . .";
+}
+
+.ext-review-ui-inspectRevisionDialog-progress > .oo-ui-progressBarWidget {
+    grid-area: progress;
+}
+
+.ext-review-ui-inspectRevisionDialog-content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "indexLayout indexLayout commentBlock";
+}
+
+.ext-review-ui-inspectRevisionDialog-indexLayout {
+    grid-area: indexLayout;
+}
+
+.ext-review-ui-inspectRevisionDialog-commentBlock {
+    grid-area: commentBlock;
+}

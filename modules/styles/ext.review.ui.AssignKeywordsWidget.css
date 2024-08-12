@@ -1,0 +1,30 @@
+.ext-review-ui-assignKeywordsWidget .ext-review-ui-blockWidget-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "keywordsLabel keywordsMultiselect keywordsMultiselect keywordsMultiselect"
+        ". . . confirmButton";
+}
+
+.ext-review-ui-assignKeywordsWidget-keywordsLabel {
+    grid-area: keywordsLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-assignKeywordsWidget-keywordsMultiselect {
+    grid-area: keywordsMultiselect;
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-assignKeywordsWidget-confirmButton {
+    grid-area: confirmButton;
+}
+
+.ext-review-ui-assignKeywordsWidget-confirmButton > .oo-ui-buttonElement-button {
+    max-width: none;
+    width: 100%;
+}

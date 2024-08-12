@@ -1,0 +1,22 @@
+.ext-review-dialogs-reviewRevisionDialog .ext-review-dialogs-dialog-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "indexLayout indexLayout verdict"
+        "indexLayout indexLayout commentBlock"
+        "indexLayout indexLayout commentBlock"
+        "indexLayout indexLayout commentBlock";
+}
+
+.ext-review-dialogs-reviewRevisionDialog-indexLayout {
+    grid-area: indexLayout;
+}
+
+.ext-review-dialogs-reviewRevisionDialog-verdict {
+    grid-area: verdict;
+}
+
+.ext-review-dialogs-reviewRevisionDialog-commentBlock {
+    grid-area: commentBlock;
+}

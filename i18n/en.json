@@ -1,0 +1,120 @@
+{
+  "@metadata": {
+    "authors": [
+      "lvefunc"
+    ]
+  },
+  "review": "Review",
+  "echo-pref-tooltip-review": "Review",
+
+  "review-notification-new-revision-bundled": "You have created $1 new revisions!",
+  "review-notification-new-revision": "You have created new revision (#$2) of page \"$1\"!",
+  "review-notification-status-changed-bundled": "There was $1 of your revisions which have got their statuses changed!",
+  "review-notification-status-changed": "Your revision (#$2) of page \"$1\" got its status changed to \"$3\"!",
+
+  "review-assign-keywords-task": "Keywords assignment",
+  "review-verify-keywords-task": "Keywords verification",
+  "review-create-competence-task": "Competence creation",
+  "review-review-revision-task": "Revision review",
+
+  "review-error-unsupported-task": "Action you are trying to perform doesn't support this type of task",
+  "review-error-keyword-exists": "Can't create new keyword since keyword with given name already exists",
+  "review-error-synonyms-exist": "Can't create new keyword with given synonym set since some of the synonyms are already bound to other keywords",
+  "review-error-match-exists": "Can't assign keyword to revision since given match already exists",
+  "review-error-match-does-not-exist": "Can't unassign keyword from revision since given match doesn't exist",
+  "review-error-expert-exists": "Can't make user an expert since they already are",
+  "review-error-competence-exists": "Can't create such competence since it already exists",
+  "review-error-competence-does-not-exist": "Can't delete such competence since it doesn't exist",
+  "review-error-insufficient-rights": "",
+
+  "review-dialogs-dialog-finish-action-label": "Finish",
+  "review-dialogs-dialog-cancel-action-label": "Cancel",
+
+  "review-dialogs-assign-keywords-dialog-title": "Keywords assignment",
+  "review-dialogs-assign-keywords-dialog-article-tab-label": "Article",
+  "review-dialogs-assign-keywords-dialog-diff-tab-label": "Difference",
+
+  "review-dialogs-verify-keywords-dialog-title": "Keywords verification",
+  "review-dialogs-verify-keywords-dialog-article-tab-label": "Article",
+  "review-dialogs-verify-keywords-dialog-diff-tab-label": "Difference",
+
+  "review-dialogs-create-competence-dialog-title": "Competence creation",
+
+  "review-dialogs-review-revision-dialog-title": "Revision review",
+  "review-dialogs-review-revision-dialog-article-tab-label": "Article",
+  "review-dialogs-review-revision-dialog-diff-tab-label": "Difference",
+  "review-dialogs-review-revision-dialog-comment-block-label": "Comments",
+  "review-dialogs-review-revision-dialog-context-menu-add-a-comment-option-label": "Add a comment",
+
+  "review-model-revision-new": "New",
+  "review-model-revision-queried": "Queried",
+  "review-model-revision-current": "Current",
+  "review-model-revision-rejected": "Rejected",
+  "review-model-revision-legacy": "Legacy",
+
+  "review-ui-edit-tree-table-column-title": "Title",
+  "review-ui-edit-tree-table-column-status": "Status",
+  "review-ui-edit-tree-table-column-timestamp": "Timestamp",
+  "review-ui-edit-tree-table-column-inspect": "Inspect",
+  "review-ui-edit-tree-table-column-create-revision": "Create revision based on this",
+  "review-ui-edit-tree-table-column-create-workflow": "Create workflow based on this",
+  "review-ui-edit-tree-table-revision-title": "Revision #$1",
+  "review-ui-edit-tree-table-inspect-revision-button-label": "Inspect",
+  "review-ui-edit-tree-table-create-revision-button-label": "Create revision",
+  "review-ui-edit-tree-table-create-workflow-button-label": "Create workflow",
+  "review-ui-edit-tree-table-empty-row": "–",
+
+  "review-ui-diff-widget-this-revision": "This revision (id: $1, created: $2):",
+  "review-ui-diff-widget-parent-revision": "Parent revision (id: $1, created: $2):",
+  "review-ui-diff-widget-blank-revision": "There's no parent revision, comparing with blank page:",
+
+  "review-ui-create-keyword-widget-widget-label": "Keyword creation",
+  "review-ui-create-keyword-widget-keyword-label": "Keyword",
+  "review-ui-create-keyword-widget-keyword-textinput-placeholder": "Enter a keyword",
+  "review-ui-create-keyword-widget-synonyms-label": "Synonyms",
+  "review-ui-create-keyword-widget-synonyms-multiselect-placeholder": "Enter synonyms (optional)",
+  "review-ui-create-keyword-widget-confirm-button-label": "Confirm",
+  "review-ui-create-keyword-widget-not-valid-input": "Keyword value is not valid. Must be non-empty string.",
+
+  "review-ui-assign-keywords-widget-label": "Keywords assignment",
+  "review-ui-assign-keywords-widget-keywords-label": "Keywords",
+  "review-ui-assign-keywords-widget-keywords-multiselect-placeholder": "Enter keywords",
+  "review-ui-assign-keywords-widget-confirm-button-label": "Confirm",
+
+  "review-ui-make-user-expert-widget-label": "Promotion of users to experts",
+  "review-ui-make-user-expert-widget-users-label": "Users",
+  "review-ui-make-user-expert-widget-users-multiselect-placeholder": "Select users that are to become experts",
+  "review-ui-make-user-expert-widget-confirm-button-label": "Confirm",
+
+  "review-ui-create-competence-widget-label": "Competence creation",
+  "review-ui-create-competence-widget-keyword-label": "Keyword",
+  "review-ui-create-competence-widget-synonyms-label": "Synonyms",
+  "review-ui-create-competence-widget-experts-label": "Experts",
+  "review-ui-create-competence-widget-experts-multiselect-placeholder": "Select experts that are eligible to review revisions marked by this keyword",
+  "review-ui-create-competence-widget-confirm-button-label": "Confirm",
+
+  "review-ui-verdict-widget-label": "Verdict issuing",
+  "review-ui-verdict-widget-accept-radio-label": "Accept",
+  "review-ui-verdict-widget-reject-radio-label": "Reject",
+
+  "review-ui-comment-item-widget-delete-button-label": "Delete",
+
+  "review-ui-comment-select-widget-add-prompt-message": "Add a comment",
+  "review-ui-comment-select-widget-add-prompt-textinput-placeholder": "Enter comment text",
+
+  "review-ui-pagination-widget-ordering-label": "Ordering",
+  "review-ui-pagination-widget-ordering-descending": "Descending",
+  "review-ui-pagination-widget-ordering-ascending": "Ascending",
+  "review-ui-pagination-widget-confirm-ordering-button-label": "Confirm",
+  "review-ui-pagination-widget-limit-label": "Limit",
+  "review-ui-pagination-widget-limit-ten": "10",
+  "review-ui-pagination-widget-limit-twenty-five": "25",
+  "review-ui-pagination-widget-limit-fifty": "50",
+  "review-ui-pagination-widget-limit-one-hundred": "100",
+  "review-ui-pagination-widget-confirm-limit-button-label": "Confirm",
+
+  "review-ui-inspect-revision-dialog-title": "Revision inspection",
+  "review-ui-inspect-revision-dialog-article-tab-label": "Article",
+  "review-ui-inspect-revision-dialog-diff-tab-label": "Difference",
+  "review-ui-inspect-revision-dialog-comment-block-label": "Comments"
+}

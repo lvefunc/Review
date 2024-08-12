@@ -1,0 +1,7 @@
+.ext-review-ui-treeNode-indent {
+    display: inline-block;
+}
+
+.ext-review-ui-treeNode > .ext-review-ui-treeNode-cell > .oo-ui-buttonWidget {
+    margin-right: 0;
+}

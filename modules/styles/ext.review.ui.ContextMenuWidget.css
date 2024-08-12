@@ -1,0 +1,34 @@
+.ext-review-ui-contextMenuWidget-menu {
+    z-index: 999;
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    min-width: 150px;
+    margin: 0;
+    padding: 0;
+    border-style: solid;
+    border-color: #c8ccd1;
+    border-width: 1px;
+    border-radius: 2px 2px 2px 2px;
+    background-color: #ffffff;
+}
+
+.ext-review-ui-contextMenuWidget-content {
+}
+
+.ext-review-ui-contextMenuWidget-menu > li {
+    padding: 0 5px 0 5px;
+    user-select: none;
+}
+
+.ext-review-ui-contextMenuWidget-menu > li:first-child {
+    margin-top: 5px;
+}
+
+.ext-review-ui-contextMenuWidget-menu > li:last-child {
+    margin-bottom: 5px;
+}
+
+.ext-review-ui-contextMenuWidget-menu > li:hover {
+    background-color: #eaecf0;
+}

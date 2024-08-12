@@ -1,0 +1,57 @@
+.ext-review-ui-commentItemWidget {
+    max-width: none;
+    padding: 5px;
+    border-radius: 5px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        ". . . . ."
+        "textLabel textLabel textLabel commentatorLabel deleteButton"
+        ". . . . .";
+}
+
+.ext-review-ui-commentItemWidget-textLabel {
+    grid-area: textLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-commentItemWidget-commentatorLabel {
+    grid-area: commentatorLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-commentItemWidget-deleteButton {
+    grid-area: deleteButton;
+}
+
+.ext-review-ui-commentItemWidget-deleteButton > .oo-ui-buttonElement-button {
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-commentItemWidget-deleteButton-enabled {
+    visibility: visible;
+}
+
+.ext-review-ui-commentItemWidget-deleteButton-disabled {
+    visibility: hidden;
+}
+
+.ext-review-ui-commentItemWidget.oo-ui-optionWidget-highlighted.oo-ui-optionWidget-selected {
+    background-color: #c8ccd1;
+}
+
+.ext-review-ui-commentItemWidget.oo-ui-optionWidget-highlighted {
+    background-color: #eaecf0;
+}
+
+.ext-review-ui-commentItemWidget.oo-ui-optionWidget-pressed {
+    background-color: #c8ccd1;
+}
+
+.ext-review-ui-commentItemWidget.oo-ui-optionWidget-selected {
+    background-color: #c8ccd1;
+}

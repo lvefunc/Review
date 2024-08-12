@@ -1,0 +1,50 @@
+.ext-review-ui-treeTable {
+    width: 100%;
+    border: 1px solid #c8ccd1;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 2px;
+}
+
+.ext-review-ui-tableHeader-column, .ext-review-ui-treeNode-cell {
+    height: 32px;
+}
+
+.ext-review-ui-treeNode td {
+    border-top: 1px solid #c8ccd1;
+    border-left: 1px solid #c8ccd1;
+}
+
+.ext-review-ui-treeNode td:first-child {
+    border-left: none;
+}
+
+.ext-review-ui-treeTable tbody tr:first-child td {
+    border-top: none;
+}
+
+.ext-review-ui-tableHeader tr th {
+    border-top: 1px solid #c8ccd1;
+    border-left: 1px solid #c8ccd1;
+}
+
+.ext-review-ui-tableHeader tr th:last-child {
+    border-right: 1px solid #c8ccd1;
+}
+
+.ext-review-ui-tableHeader-column {
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #c8ccd1;
+}
+
+.ext-review-ui-treeNode td {
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.ext-review-ui-treeNode td:first-child {
+    text-align: left;
+}

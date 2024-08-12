@@ -1,0 +1,30 @@
+.ext-review-ui-makeUserExpertWidget .ext-review-ui-blockWidget-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "usersLabel usersMultiselect usersMultiselect usersMultiselect"
+        ". . . confirmButton";
+}
+
+.ext-review-ui-makeUserExpertWidget-usersLabel {
+    grid-area: usersLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-makeUserExpertWidget-usersMultiselect {
+    grid-area: usersMultiselect;
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-makeUserExpertWidget-confirmButton {
+    grid-area: confirmButton;
+}
+
+.ext-review-ui-makeUserExpertWidget-confirmButton > .oo-ui-buttonElement-button {
+    max-width: none;
+    width: 100%;
+}

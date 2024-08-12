@@ -1,0 +1,132 @@
+.ext-review-ui-paginationWidget {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "progress progress progress progress progress progress progress progress"
+        "content content content content content content content content"
+        "ordering ordering ordering ordering . . . navigation"
+        "limit limit limit limit . . . .";
+}
+
+.ext-review-ui-paginationWidget-progress {
+    grid-area: progress;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 16px 1fr;
+    grid-template-areas:
+        ". . ."
+        ". progress ."
+        ". . .";
+}
+
+.ext-review-ui-paginationWidget-progress > .oo-ui-progressBarWidget {
+    grid-area: progress;
+}
+
+.ext-review-ui-paginationWidget-content {
+    grid-area: content;
+}
+
+.ext-review-ui-paginationWidget-ordering {
+    grid-area: ordering;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "orderingLabel orderingDropdownInput orderingDropdownInput orderingDropdownInput confirmOrderingButton"
+        "orderingLabel orderingDropdownInput orderingDropdownInput orderingDropdownInput confirmOrderingButton";
+}
+
+.ext-review-ui-paginationWidget-orderingLabel {
+    grid-area: orderingLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-paginationWidget-orderingDropdownInput {
+    grid-area: orderingDropdownInput;
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-paginationWidget-confirmOrderingButton {
+    grid-area: confirmOrderingButton;
+}
+
+.ext-review-ui-paginationWidget-confirmOrderingButton > .oo-ui-buttonElement-button {
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-paginationWidget-limit {
+    grid-area: limit;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "limitLabel limitDropdownInput limitDropdownInput limitDropdownInput confirmLimitButton"
+        "limitLabel limitDropdownInput limitDropdownInput limitDropdownInput confirmLimitButton";
+}
+
+.ext-review-ui-paginationWidget-limitLabel {
+    grid-area: limitLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-paginationWidget-limitDropdownInput {
+    grid-area: limitDropdownInput;
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-paginationWidget-confirmLimitButton {
+    grid-area: confirmLimitButton;
+}
+
+.ext-review-ui-paginationWidget-confirmLimitButton > .oo-ui-buttonElement-button {
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-paginationWidget-navigation {
+    grid-area: navigation;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "prevPageButton currentPageLabel nextPageButton"
+        "prevPageButton currentPageLabel nextPageButton";
+}
+
+.ext-review-ui-paginationWidget-currentPageLabel {
+    grid-area: currentPageLabel;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ext-review-ui-paginationWidget-prevPageButton {
+    grid-area: prevPageButton;
+    margin-right: 0;
+}
+
+.ext-review-ui-paginationWidget-prevPageButton > .oo-ui-buttonElement-button {
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-paginationWidget-nextPageButton {
+    grid-area: nextPageButton;
+}
+
+.ext-review-ui-paginationWidget-nextPageButton > .oo-ui-buttonElement-button {
+    max-width: none;
+    width: 100%;
+}

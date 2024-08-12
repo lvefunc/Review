@@ -1,0 +1,67 @@
+.ext-review-ui-createCompetenceWidget .ext-review-ui-blockWidget-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "keywordLabel keywordTextInput keywordTextInput keywordTextInput"
+        "synonymsLabel synonymsMultiselect synonymsMultiselect synonymsMultiselect"
+        "expertsLabel expertsMultiselect expertsMultiselect expertsMultiselect"
+        ". . . confirmButton";
+}
+
+.ext-review-ui-createCompetenceWidget-keywordLabel {
+    grid-area: keywordLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-createCompetenceWidget-keywordTextInput {
+    grid-area: keywordTextInput;
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-createCompetenceWidget-synonymsLabel {
+    grid-area: synonymsLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-createCompetenceWidget-synonymsMultiselect {
+    grid-area: synonymsMultiselect;
+    background-color: #f8f9fa;
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-createCompetenceWidget-synonymsMultiselect.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled {
+    background-color: #f8f9fa;
+}
+
+.ext-review-ui-createCompetenceWidget-synonymsMultiselect .oo-ui-tagItemWidget.oo-ui-widget-disabled {
+    color: #202122;
+    border-color: #a2a9b1;
+    text-shadow: none;
+}
+
+.ext-review-ui-createCompetenceWidget-expertsLabel {
+    grid-area: expertsLabel;
+    display: flex;
+    align-items: center;
+}
+
+.ext-review-ui-createCompetenceWidget-expertsMultiselect {
+    grid-area: expertsMultiselect;
+    max-width: none;
+    width: 100%;
+}
+
+.ext-review-ui-createCompetenceWidget-confirmButton {
+    grid-area: confirmButton;
+}
+
+.ext-review-ui-createCompetenceWidget-confirmButton > .oo-ui-buttonElement-button {
+    max-width: none;
+    width: 100%;
+}

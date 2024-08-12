@@ -1,0 +1,20 @@
+.ext-review-dialogs-assignKeywordsDialog .ext-review-dialogs-dialog-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "indexLayout indexLayout assignKeywords"
+        "indexLayout indexLayout createKeyword";
+}
+
+.ext-review-dialogs-assignKeywordsDialog-indexLayout {
+    grid-area: indexLayout;
+}
+
+.ext-review-dialogs-assignKeywordsDialog-assignKeywords {
+    grid-area: assignKeywords;
+}
+
+.ext-review-dialogs-assignKeywordsDialog-createKeyword {
+    grid-area: createKeyword;
+}

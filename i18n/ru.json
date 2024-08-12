@@ -1,0 +1,52 @@
+{
+  "@metadata": {
+    "authors": [
+      "lvefunc"
+    ]
+  },
+  "review": "Согласование",
+
+  "review-assign-keywords-task": "Назначение ключевых слов",
+  "review-verify-keywords-task": "Верификация ключевых слов",
+  "review-create-competence-task": "Создание компетенций",
+  "review-review-revision-task": "Проверка ревизии",
+
+  "review-dialogs-assign-keywords-dialog-title": "Назначение ключевых слов",
+  "review-dialogs-assign-keywords-dialog-article-tab-label": "Статья",
+  "review-dialogs-assign-keywords-dialog-diff-tab-label": "Разница",
+
+  "review-error-unsupported-task": "Действие, которое Вы пытаетесь выполнить, не поддерживает данную задачу",
+  "review-error-keyword-exists": "Нет возможности создать новое ключевое слово, так как ключевое слово с таким названием уже существует",
+  "review-error-synonyms-exist": "Нет возможности создать новое ключевое слово с данным набором синонимов, так как некоторые из синонимов уже привязаны к другим ключевым словам",
+
+  "review-dialogs-dialog-finish-action-label": "Завершить",
+  "review-dialogs-dialog-cancel-action-label": "Отменить",
+
+  "review-ui-create-keyword-widget-widget-label": "Создание ключевых слов",
+  "review-ui-create-keyword-widget-keyword-label": "Ключевое слово",
+  "review-ui-create-keyword-widget-keyword-textinput-placeholder": "Введите ключевое слово",
+  "review-ui-create-keyword-widget-synonyms-label": "Синонимы",
+  "review-ui-create-keyword-widget-synonyms-multiselect-placeholder": "Введите синонимы (опционально)",
+  "review-ui-create-keyword-widget-confirm-button-label": "Подтвердить",
+  "review-ui-create-keyword-widget-not-valid-input": "Невалидное значение ключевого слова. Значение должно быть непустой строкой.",
+
+  "review-ui-assign-keywords-widget-label": "Назначение ключевых слов",
+  "review-ui-assign-keywords-widget-keywords-label": "Ключевые слова",
+  "review-ui-assign-keywords-widget-keywords-multiselect-placeholder": "Введите ключевые слова",
+  "review-ui-assign-keywords-widget-confirm-button-label": "Подтвердить",
+
+  "review-dialogs-review-revision-dialog-title": "Проверка ревизии",
+  "review-dialogs-review-revision-dialog-article-tab-label": "Статья",
+  "review-dialogs-review-revision-dialog-diff-tab-label": "Разница",
+  "review-dialogs-review-revision-dialog-comment-block-label": "Комментарии",
+  "review-dialogs-review-revision-dialog-context-menu-add-a-comment-option-label": "Добавить комментарий",
+  
+  "review-ui-verdict-widget-label": "Вердикт",
+  "review-ui-verdict-widget-accept-radio-label": "Принять",
+  "review-ui-verdict-widget-reject-radio-label": "Отклонить",
+
+  "review-ui-comment-item-widget-delete-button-label": "Удалить",
+
+  "review-ui-comment-select-widget-add-prompt-message": "Добавление комментария",
+  "review-ui-comment-select-widget-add-prompt-textinput-placeholder": "Введите текст комментария"
+}

@@ -1,0 +1,16 @@
+.ext-review-dialogs-createCompetenceDialog.ext-review-dialogs-dialog-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "createCompetence makeUserExpert"
+        "createCompetence makeUserExpert";
+}
+
+.ext-review-dialogs-createCompetenceDialog-createCompetence {
+    grid-area: createCompetence;
+}
+
+.ext-review-dialogs-createCompetenceDialog-makeUserExpert {
+    grid-area: makeUserExpert;
+}

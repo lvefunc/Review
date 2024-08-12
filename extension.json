@@ -1,0 +1,316 @@
+{
+  "name": "Review",
+  "author": [
+    "lvefunc"
+  ],
+  "url": "",
+  "description": "",
+  "license-name": "GPL-2.0-or-later",
+  "type": "other",
+  "requires": {
+    "MediaWiki": ">= 1.35.0",
+    "extensions": {
+      "MiniORM": "*",
+      "Workflows": "*"
+    }
+  },
+  "GroupPermissions": {
+    "bureaucrat": {
+      "review-admin-powers": true
+    },
+    "sysop": {
+      "review-admin-powers": true
+    }
+  },
+  "AvailableRights": [
+    "review-admin-powers"
+  ],
+  "AutoloadNamespaces": {
+    "Review\\": "includes/"
+  },
+  "APIListModules": {
+    "reviewedits": "Review\\Api\\Query\\ApiQueryEdits",
+    "reviewrevisions": "Review\\Api\\Query\\ApiQueryRevisions",
+    "reviewmatches": "Review\\Api\\Query\\ApiQueryMatches",
+    "reviewkeywords": "Review\\Api\\Query\\ApiQueryKeywords",
+    "reviewsynonyms": "Review\\Api\\Query\\ApiQuerySynonyms",
+    "reviewcomments": "Review\\Api\\Query\\ApiQueryComments",
+    "reviewranges": "Review\\Api\\Query\\ApiQueryRanges",
+    "reviewexperts": "Review\\Api\\Query\\ApiQueryExperts",
+    "reviewcompetencies": "Review\\Api\\Query\\ApiQueryCompetencies"
+  },
+  "SpecialPages": {
+    "Review": "Review\\Special"
+  },
+  "Hooks": {
+    "RegisterSchemaUpdates": "Review\\Hooks::registerSchemaUpdates",
+    "RegisterWorkflowsModules": "Review\\Hooks::registerWorkflowsModules",
+    "RegisterWorkflowsResourceModules": "Review\\Hooks::registerWorkflowsResourceModules",
+    "MultiContentSave": "Review\\Hooks::onMultiContentSave",
+    "EditFormInitialText": "Review\\Hooks::onEditFormInitialText",
+    "EditFormPreloadText": "Review\\Hooks::onEditFormPreloadText",
+    "EditPage::showEditForm:fields": "Review\\Hooks::onEditPage_showEditForm_fields",
+    "BeforePageDisplay": "Review\\Hooks::onBeforePageDisplay",
+    "BeforeCreateEchoEvent": "Review\\Hooks::onBeforeCreateEchoEvent",
+    "EchoGetBundleRules": "Review\\Hooks::onEchoGetBundleRules"
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "modules",
+    "remoteExtPath": "Review/modules"
+  },
+  "ResourceModules": {
+    "ext.review.init": {
+      "packageFiles": [
+        "ext.review.init.js"
+      ],
+      "dependencies": [
+        "mediawiki.api"
+      ]
+    },
+    "ext.review.utils": {
+      "es6": true,
+      "scripts": [
+        "utils/ext.review.utils.js",
+        "utils/ext.review.utils.Range.js"
+      ],
+      "dependencies": [
+        "oojs"
+      ]
+    },
+    "ext.review.model": {
+      "es6": true,
+      "scripts": [
+        "model/ext.review.model.js",
+        "model/ext.review.model.Mutex.js",
+        "model/ext.review.model.IdentityMap.js",
+        "model/ext.review.model.User.js",
+        "model/ext.review.model.Edit.js",
+        "model/ext.review.model.Revision.js",
+        "model/ext.review.model.Match.js",
+        "model/ext.review.model.Keyword.js",
+        "model/ext.review.model.Synonym.js",
+        "model/ext.review.model.Comment.js",
+        "model/ext.review.model.Range.js",
+        "model/ext.review.model.Expert.js",
+        "model/ext.review.model.Competence.js"
+      ],
+      "dependencies": [
+        "oojs",
+        "ext.review.init"
+      ],
+      "messages": [
+        "review-model-revision-new",
+        "review-model-revision-queried",
+        "review-model-revision-current",
+        "review-model-revision-rejected",
+        "review-model-revision-legacy"
+      ]
+    },
+    "ext.review.ui": {
+      "es6": true,
+      "scripts": [
+        "ui/ext.review.ui.js",
+        "ui/ext.review.ui.TableHeader.js",
+        "ui/ext.review.ui.TreeNode.js",
+        "ui/ext.review.ui.TreeTable.js",
+        "ui/ext.review.ui.PaginationWidget.js",
+        "ui/ext.review.ui.Renderer.js",
+        "ui/ext.review.ui.EditTreeTableRenderer.js",
+        "ui/ext.review.ui.ArticleWidget.js",
+        "ui/ext.review.ui.DiffWidget.js",
+        "ui/ext.review.ui.BlockWidget.js",
+        "ui/ext.review.ui.CreateKeywordWidget.js",
+        "ui/ext.review.ui.AssignKeywordsWidget.js",
+        "ui/ext.review.ui.MakeUserExpertWidget.js",
+        "ui/ext.review.ui.CreateCompetenceWidget.js",
+        "ui/ext.review.ui.VerdictWidget.js",
+        "ui/ext.review.ui.ContextMenuWidget.js",
+        "ui/ext.review.ui.CommentItemWidget.js",
+        "ui/ext.review.ui.CommentSelectWidget.js",
+        "ui/ext.review.ui.InspectRevisionDialog.js"
+      ],
+      "styles": [
+        "styles/ext.review.ui.TreeNode.css",
+        "styles/ext.review.ui.TreeTable.css",
+        "styles/ext.review.ui.PaginationWidget.css",
+        "styles/ext.review.ui.ArticleWidget.css",
+        "styles/ext.review.ui.DiffWidget.css",
+        "styles/ext.review.ui.BlockWidget.css",
+        "styles/ext.review.ui.CreateKeywordWidget.css",
+        "styles/ext.review.ui.AssignKeywordsWidget.css",
+        "styles/ext.review.ui.MakeUserExpertWidget.css",
+        "styles/ext.review.ui.CreateCompetenceWidget.css",
+        "styles/ext.review.ui.VerdictWidget.css",
+        "styles/ext.review.ui.ContextMenuWidget.css",
+        "styles/ext.review.ui.CommentItemWidget.css",
+        "styles/ext.review.ui.CommentSelectWidget.css",
+        "styles/ext.review.ui.InspectRevisionDialog.css"
+      ],
+      "dependencies": [
+        "oojs",
+        "oojs-ui-core",
+        "oojs-ui-widgets",
+        "oojs-ui-windows",
+        "oojs-ui.styles.icons-movement",
+        "mediawiki.diff.styles",
+        "ext.review.init",
+        "ext.review.utils",
+        "ext.review.model",
+        "ext.workflows.model"
+      ],
+      "messages": [
+        "review-assign-keywords-task",
+        "review-verify-keywords-task",
+        "review-create-competence-task",
+        "review-review-revision-task",
+        "review-error-unsupported-task",
+        "review-error-keyword-exists",
+        "review-error-synonyms-exist",
+        "review-error-match-exists",
+        "review-error-match-does-not-exist",
+        "review-error-expert-exists",
+        "review-error-competence-exists",
+        "review-error-insufficient-rights",
+        "review-ui-edit-tree-table-column-title",
+        "review-ui-edit-tree-table-column-status",
+        "review-ui-edit-tree-table-column-timestamp",
+        "review-ui-edit-tree-table-column-inspect",
+        "review-ui-edit-tree-table-column-create-revision",
+        "review-ui-edit-tree-table-column-create-workflow",
+        "review-ui-edit-tree-table-revision-title",
+        "review-ui-edit-tree-table-inspect-revision-button-label",
+        "review-ui-edit-tree-table-create-revision-button-label",
+        "review-ui-edit-tree-table-create-workflow-button-label",
+        "review-ui-edit-tree-table-empty-row",
+        "review-ui-diff-widget-this-revision",
+        "review-ui-diff-widget-parent-revision",
+        "review-ui-diff-widget-blank-revision",
+        "review-ui-create-keyword-widget-widget-label",
+        "review-ui-create-keyword-widget-keyword-label",
+        "review-ui-create-keyword-widget-keyword-textinput-placeholder",
+        "review-ui-create-keyword-widget-synonyms-label",
+        "review-ui-create-keyword-widget-synonyms-multiselect-placeholder",
+        "review-ui-create-keyword-widget-confirm-button-label",
+        "review-ui-create-keyword-widget-not-valid-input",
+        "review-ui-assign-keywords-widget-label",
+        "review-ui-assign-keywords-widget-keywords-label",
+        "review-ui-assign-keywords-widget-keywords-multiselect-placeholder",
+        "review-ui-assign-keywords-widget-confirm-button-label",
+        "review-ui-make-user-expert-widget-label",
+        "review-ui-make-user-expert-widget-users-label",
+        "review-ui-make-user-expert-widget-users-multiselect-placeholder",
+        "review-ui-make-user-expert-widget-confirm-button-label",
+        "review-ui-create-competence-widget-label",
+        "review-ui-create-competence-widget-keyword-label",
+        "review-ui-create-competence-widget-synonyms-label",
+        "review-ui-create-competence-widget-experts-label",
+        "review-ui-create-competence-widget-experts-multiselect-placeholder",
+        "review-ui-create-competence-widget-confirm-button-label",
+        "review-ui-verdict-widget-label",
+        "review-ui-verdict-widget-accept-radio-label",
+        "review-ui-verdict-widget-reject-radio-label",
+        "review-ui-comment-item-widget-delete-button-label",
+        "review-ui-comment-select-widget-add-prompt-message",
+        "review-ui-comment-select-widget-add-prompt-textinput-placeholder",
+        "review-ui-pagination-widget-ordering-label",
+        "review-ui-pagination-widget-ordering-descending",
+        "review-ui-pagination-widget-ordering-ascending",
+        "review-ui-pagination-widget-confirm-ordering-button-label",
+        "review-ui-pagination-widget-limit-label",
+        "review-ui-pagination-widget-limit-ten",
+        "review-ui-pagination-widget-limit-twenty-five",
+        "review-ui-pagination-widget-limit-fifty",
+        "review-ui-pagination-widget-limit-one-hundred",
+        "review-ui-pagination-widget-confirm-limit-button-label",
+        "review-dialogs-dialog-finish-action-label",
+        "review-dialogs-dialog-cancel-action-label",
+        "review-ui-inspect-revision-dialog-title",
+        "review-ui-inspect-revision-dialog-article-tab-label",
+        "review-ui-inspect-revision-dialog-diff-tab-label",
+        "review-ui-inspect-revision-dialog-comment-block-label"
+      ]
+    },
+    "ext.review.special": {
+      "es6": true,
+      "packageFiles": [
+        "ext.review.special.js"
+      ],
+      "dependencies": [
+        "ext.review.ui"
+      ]
+    },
+    "ext.review.dialogs": {
+      "es6": true,
+      "scripts": [
+        "dialogs/ext.review.dialogs.js",
+        "dialogs/ext.review.dialogs.Dialog.js",
+        "dialogs/ext.review.dialogs.AssignKeywordsDialog.js",
+        "dialogs/ext.review.dialogs.VerifyKeywordsDialog.js",
+        "dialogs/ext.review.dialogs.CreateCompetenceDialog.js",
+        "dialogs/ext.review.dialogs.ReviewRevisionDialog.js"
+      ],
+      "styles": [
+        "styles/ext.review.dialogs.Dialog.css",
+        "styles/ext.review.dialogs.AssignKeywordsDialog.css",
+        "styles/ext.review.dialogs.VerifyKeywordsDialog.css",
+        "styles/ext.review.dialogs.CreateCompetenceDialog.css",
+        "styles/ext.review.dialogs.ReviewRevisionDialog.css"
+      ],
+      "dependencies": [
+        "mediawiki.api",
+        "oojs-ui-windows",
+        "ext.review.model",
+        "ext.review.ui"
+      ],
+      "messages": [
+        "review-assign-keywords-task",
+        "review-verify-keywords-task",
+        "review-create-competence-task",
+        "review-review-revision-task",
+        "review-dialogs-dialog-finish-action-label",
+        "review-dialogs-dialog-cancel-action-label",
+        "review-dialogs-assign-keywords-dialog-title",
+        "review-dialogs-assign-keywords-dialog-article-tab-label",
+        "review-dialogs-assign-keywords-dialog-diff-tab-label",
+        "review-dialogs-verify-keywords-dialog-title",
+        "review-dialogs-verify-keywords-dialog-article-tab-label",
+        "review-dialogs-verify-keywords-dialog-diff-tab-label",
+        "review-dialogs-create-competence-dialog-title",
+        "review-dialogs-review-revision-dialog-title",
+        "review-dialogs-review-revision-dialog-article-tab-label",
+        "review-dialogs-review-revision-dialog-diff-tab-label",
+        "review-dialogs-review-revision-dialog-comment-block-label",
+        "review-dialogs-review-revision-dialog-context-menu-add-a-comment-option-label"
+      ]
+    },
+    "ext.review.hook": {
+      "es6": true,
+      "packageFiles": [
+        "ext.review.hook.js"
+      ],
+      "dependencies": [
+        "mediawiki.api",
+        "oojs-ui-windows"
+      ]
+    },
+    "ext.review.preload": {
+      "packageFiles": [
+        "ext.review.preload.js"
+      ],
+      "dependencies": [
+        "mediawiki.api",
+        "mediawiki.Title"
+      ]
+    }
+  },
+  "ExtensionMessagesFiles": {
+    "ReviewAlias": "Review.i18n.alias.php"
+  },
+  "MessagesDirs": {
+    "Review": [
+      "i18n",
+      "i18n/api"
+    ]
+  },
+  "manifest_version": 2
+}
